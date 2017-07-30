@@ -4,9 +4,13 @@
   "description": "indian food takeaway",
   "main": "index.js",
   "scripts": {
+    "start":"node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "engines":{
+    "node":"8.1.3"
+  },
+  "author": "Nishant",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
