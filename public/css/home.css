@@ -1,0 +1,159 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: avenir;
+    height: 710px;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    clear: both;
+    margin-left: 4%;
+}
+
+.h1 {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 0;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+button[name="view-cart-btn"], button[name="logout-btn"] {
+    width: 180px;
+    height: 50px;
+    font-size: 1em;
+    float: right;
+    cursor: pointer;
+    margin: 1%;
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    color: white;
+}
+
+button[name="view-cart-btn"]:hover, button[name="logout-btn"]:hover {
+    background: #cc2b5e;
+}
+
+.main-div {
+    clear: both;
+    width: 80%;
+    margin: 1% auto 0 auto;
+    padding: 2%;
+    border-top: 1px solid #939393;
+}
+
+.items-sorting-tabs-div {
+    width: 60%;
+    display: flex;
+    height: 50px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*for mains, sides, desserts*/
+
+.items-sorting-tabs-div div {
+    flex: 1;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #E44D26;
+    letter-spacing: 1px;
+    padding: 2%;
+    cursor: pointer;
+    border: 1px solid #cc2b5e;
+}
+
+.active-category {
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    color: white;
+    box-shadow: 1px 1px 1px 1px #cc2b5e;
+}
+
+.colorToTabs {
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    border: 1px solid #cc2b5e;
+    color: white;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+}
+
+
+/*main container holding all the listings*/
+
+.items-listing-div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/*INDIVIDUAL ITEMS SHOULD BE TARGETED HERE*/
+
+.individual-item-divs {
+    width: 40%;
+    text-align: center;
+    margin-top: 3%;
+    padding: 2%;
+    border: 5px solid #939393;
+    background: white;
+    border-radius: 2%;
+}
+
+.addedToCart-msg {
+    display: none;
+}
+
+.individual-item-divs h2 {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: avenir;
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    box-shadow: 2px 3px 1px 1px #b2b2b2;
+}
+
+.image:hover {}
+
+button[name="add-to-cart-btn"] {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+}
+
+button[name="add-to-cart-btn"]:focus {
+    outline: none;
+}
+
+button[name="add-to-cart-btn"]:hover {
+    background: #cc2b5e;
+}
+
+input[name=qty] {
+    height: 40px;
+    width: 40px;
+    font-size: 1em;
+    text-align: center;
+}

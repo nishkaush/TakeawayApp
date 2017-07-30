@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | Signup</title>
+    <style media="screen">
+        body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            height: 700px;
+            text-align: center;
+            background: #cc2b5e;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #753a88, #cc2b5e);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        button[name=view-cart-btn],
+        button[name="logout-btn"] {
+            float: right;
+            width: 200px;
+            height: 50px;
+            margin: 2% 1% 0 0;
+        }
+
+        .main-div {
+            clear: both;
+            width: 70%;
+            /*height: 50%;*/
+            /*border: 1px solid #000;*/
+            text-align: center;
+            margin: 5% auto 0 auto;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" name="view-cart-btn">View Cart (0)</button>
+    <button type="button" name="logout-btn" id="logoutBtn">Logout</button>
+    <div class="main-div">
+
+        <h1>Prawns Rice Mains Dish</h1>
+        <p class="addedToCart-msg">Successfully Added To The Cart</p>
+        <img src="prawns-rice.jpeg">
+        <p>Description comes hrer</p>
+        <p>likes and hearts come hre</p>
+        <button name="add-to-cart-btn">Add To Cart</button>
+        <input type="text" placeholder="Qty:1">
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome To NK's</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/animate.css">
+  </head>
+  <body>
+    {{#if numberOfItems}}
+      <button type="button" name="view-cart-btn">View Cart ({{numberOfItems}})</button>
+    {{else}}
+      <button type="button" name="view-cart-btn">View Cart (0)</button>
+    {{/if}}
+
+    <button type="button" name="logout-btn" id="logoutBtn">Logout</button>
+    <img src="logo.png" alt="NK's Kitchen" class="logo">
+
+    {{#if message}}
+    <span class="h1">{{message}}!</span>
+    {{/if}}
+
+    <div class="main-div">
+
+      <div class="items-sorting-tabs-div">
+        <div class="all">All</div>
+        <div data-category="mains" class="sorting">Mains</div>
+        <div data-category="sides" class="sorting">Sides</div>
+        <div data-category="desserts" class="sorting">Desserts</div>
+      </div>
+
+      <div class="items-listing-div">
+
+        {{#each myproducts}}
+        <div class="individual-item-divs">
+
+          <p class="animated rubberBand addedToCart-msg" data-id="{{this._id}}">Successfully Added To The Cart</p>
+
+          <h2>{{this.productName}}</h2>
+
+          <img src="{{this.imgSrc}}" data-productid="{{this._id}}" class="image"><!--click on img takes to single product page -->
+
+          <p>{{this.description}}</p>
+
+          <svg class="like-icon" data-productid="{{this._id}}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 22h-5v-12h5v12zm17.615-8.412c-.857-.115-.578-.734.031-.922.521-.16 1.354-.5 1.354-1.51 0-.672-.5-1.562-2.271-1.49-1.228.05-3.666-.198-4.979-.885.906-3.656.688-8.781-1.688-8.781-1.594 0-1.896 1.807-2.375 3.469-1.221 4.242-3.312 6.017-5.687 6.885v10.878c4.382.701 6.345 2.768 10.505 2.768 3.198 0 4.852-1.735 4.852-2.666 0-.335-.272-.573-.96-.626-.811-.062-.734-.812.031-.953 1.268-.234 1.826-.914 1.826-1.543 0-.529-.396-1.022-1.098-1.181-.837-.189-.664-.757.031-.812 1.133-.09 1.688-.764 1.688-1.41 0-.565-.424-1.109-1.26-1.221z"/></svg>
+
+          <span>{{this.likes}}</span> &nbsp;
+
+          &nbsp;<svg class="heart-icon" data-productid="{{this._id}}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z"/></svg>
+
+          <span>{{this.hearts}}</span>
+
+          <h3>${{this.price}}</h3>
+
+          <button type="button" name="add-to-cart-btn" value="{{this._id}}">Add To Cart</button>
+
+          <input type="number" name="qty" placeholder="Qty" min="1">
+
+        </div>
+        {{/each}}
+
+      </div>
+
+    </div>
+
+
+
+    <script type="text/javascript" src="/js/axios.min.js"></script>
+    <script type="text/javascript" src="/js/home.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Cart Items</title>
+    <link rel="stylesheet" href="/css/mycart.css">
+</head>
+
+<body>
+  <button type="button" name="back-to-home">Back To Home</button>
+    <button type="button" name="logout-btn" id="logoutBtn">Logout</button>
+    <div class="main-div">
+
+      <div class="individual-entry">
+        <svg width="24" height="24"></svg>
+        <img class="first-image">
+        <span>Product</span>
+        <span>Quantity</span>
+        <span>Total Price</span>
+      </div>
+
+      {{#if myproducts}}
+
+        {{#each myproducts}}
+        <div class="individual-entry">
+          <svg class="remove-from-cart-icon" data-id="{{this._id}}" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+          <img src="{{this.imgSrc}}">
+          <span>{{this.productName}}</span>
+          <span>{{this.qty}}</span>
+          <span>$ {{totalPrice this.price this.qty}}</span>
+        </div>
+        {{/each}}
+
+      {{else}}
+      <h1>No items in the cart currently</h1>
+      {{/if}}
+
+      <div class="totals">
+        <span>Total Payable</span>
+        <span>$ {{finalPayment myproducts}}</span>
+      </div>
+
+    </div>
+
+
+<script type="text/javascript" src="/js/axios.min.js"></script>
+
+<script type="text/javascript" src="/js/home.js"></script>
+
+<script type="text/javascript">
+const backToHomeBtn = document.querySelector('button[name="back-to-home"]');
+
+backToHomeBtn.addEventListener("click",function(){
+  window.location="/home";
+});
+</script>
+</body>
+
+</html>

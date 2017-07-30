@@ -1,0 +1,92 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 700px;
+    text-align: center;
+    font-family: avenir;
+}
+
+button[name="back-to-home"] {
+    float: left;
+    width: 200px;
+    height: 50px;
+    margin: 2% 1%;
+    cursor: pointer;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    font-size: 1em;
+    font-family: avenir;
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+    color: white;
+}
+
+button[name="back-to-home"]:hover {
+    background: #cc2b5e;
+}
+
+button[name="view-cart-btn"], button[name="logout-btn"] {
+    float: right;
+    width: 200px;
+    height: 50px;
+    margin: 2% 1%;
+    cursor: pointer;
+    font-size: 1em;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+    font-family: avenir;
+    color: white;
+}
+
+button[name="view-cart-btn"]:hover, button[name="logout-btn"]:hover {
+    background: #cc2b5e;
+}
+
+.main-div {
+    clear: both;
+    width: 70%;
+    text-align: center;
+    margin: 8% auto 0 auto;
+    padding: 1%;
+    border-top: 1px solid #939393;
+}
+
+.addedToCart-msg {
+    display: none;
+}
+
+h1 {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.description {
+    font-size: 1.25em;
+    width: 90%;
+    margin: 2% auto;
+}
+
+button[name="add-to-cart-btn"] {
+    width: 250px;
+    height: 50px;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+    font-family: avenir;
+}
+
+button[name="add-to-cart-btn"]:hover {
+    background: #cc2b5e;
+}
+
+input[name=qty] {
+    height: 40px;
+    width: 40px;
+    font-size: 1em;
+    text-align: center;
+    font-family: avenir;
+}

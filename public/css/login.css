@@ -1,0 +1,205 @@
+body {
+    width: 100%;
+    padding: 0;
+    font-family: avenir;
+    margin: 0;
+    height: 710px;
+    background: #cc2b5e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg, #753a88, #cc2b5e 20%, white 20%, white 80%, #cc2b5e 80%, #753a88);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    letter-spacing: 1px;
+    margin-top: 3%;
+    margin-bottom: 0;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 3%;
+    font-weight: normal;
+}
+
+.userMessages {
+    color: blue;
+    text-transform: capitalize;
+    /*margin: 0;*/
+}
+
+.main-div {
+    width: 35%;
+    height: 65%;
+    display: flex;
+    flex-flow: column;
+}
+
+
+/*heading tabs section starts here*/
+
+.heading-tabs {
+    flex: 0.47;
+    display: flex;
+    /*border:1px dotted red;*/
+    margin-bottom: 1%;
+}
+
+.heading-tabs div {
+    flex: 0.5;
+    display: flex;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E44D26;
+    letter-spacing: 1px;
+}
+
+.heading-tabs div:hover {
+    cursor: pointer;
+}
+
+.colorToTabs {
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    border: 1px solid #cc2b5e;
+    color: white;
+}
+
+
+/*login input boxes section starts here*/
+
+.login-input-section {
+    text-align: center;
+    width: 100%;
+    flex: 0.5;
+    display: none;
+}
+
+button[name="fbBtn"] {
+    height: 45px;
+    width: 70%;
+    margin: 2% auto 1% auto;
+    padding: 2%;
+    font-size: 1em;
+    background: #355088;
+    color: white;
+    letter-spacing: 1px;
+    border: 1px solid #355088;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[name="gooBtn"] {
+    height: 45px;
+    width: 70%;
+    margin: 1% auto;
+    font-size: 1em;
+    padding: 1%;
+    background: #ee503d;
+    color: white;
+    letter-spacing: 1px;
+    border: 1px solid #ee503d;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-input-section p {
+    width: 100%;
+    margin-top: 5%;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: black;
+}
+
+.login-form {
+    text-align: center;
+    width: 100%;
+    margin-top: 4%;
+}
+
+.login-form input {
+    width: 80%;
+    height: 50px;
+    font-size: 0.9em;
+    padding-left: 2%;
+    box-shadow: 1px 1px 1px 1px #efefef inset;
+}
+
+.login-form input:focus {
+    outline: none;
+}
+
+.login-form button {
+    width: 60%;
+    height: 55px;
+    margin-top: 2%;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+    color: white;
+    cursor: pointer;
+}
+
+.login-form button:focus {
+    outline: none;
+}
+
+.login-form button:hover {
+    background: #cc2b5e;
+}
+
+
+/*Signup section starts here*/
+
+.signup-input-section {
+    text-align: center;
+    width: 100%;
+    flex: 0.5;
+}
+
+.signup-form {
+    width: 90%;
+    margin: 1% auto;
+}
+
+.signup-form input {
+    width: 90%;
+    height: 50px;
+    margin: 4% auto;
+    font-size: 1em;
+    padding-left: 2%;
+    box-shadow: 1px 1px 1px 1px #efefef inset;
+}
+
+.signup-form button {
+    width: 70%;
+    height: 55px;
+    margin-top: 4%;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+    color: white;
+    cursor: pointer;
+}
+
+.signup-form button:focus {
+    outline: none;
+}
+
+.signup-form button:hover {
+    background: #cc2b5e;
+}
+
+
+}

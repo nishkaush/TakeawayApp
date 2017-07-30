@@ -1,0 +1,98 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 700px;
+    text-align: center;
+}
+
+button[name="logout-btn"] {
+    float: right;
+    width: 200px;
+    height: 50px;
+    margin: 2% 1%;
+    cursor: pointer;
+    font-size: 1em;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    font-family: avenir;
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+    color: white;
+}
+
+button[name="logout-btn"]:hover {
+    background: #cc2b5e;
+}
+
+button[name="back-to-home"] {
+    float: left;
+    width: 200px;
+    height: 50px;
+    margin: 2% 1%;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 2%;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    font-family: avenir;
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+    color: white;
+}
+
+button[name="logout-btn"]:hover {
+    background: #cc2b5e;
+}
+
+.main-div {
+    clear: both;
+    width: 70%;
+    text-align: center;
+    margin: 10% auto 0 auto;
+    padding: 1%;
+}
+
+.individual-entry {
+    display: flex;
+    align-items: center;
+    margin: 2% auto;
+}
+
+.individual-entry:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+img {
+    margin-right: 2%;
+    width: 100px;
+    height: 100px;
+}
+
+.first-image {
+    height: 0;
+}
+
+span {
+    margin-left: 1%;
+    margin-right: 1%;
+    flex: 1;
+    text-align: center;
+}
+
+.totals {
+    width: 90%;
+    height: 50px;
+    font-size: 2em;
+    text-align: right;
+    font-weight: bold;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+svg {
+    margin-right: 2%;
+    cursor: pointer;
+}

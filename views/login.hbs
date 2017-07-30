@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | Signup</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/animate.css">
+</head>
+<body>
+<h1>NK's KITCHEN</h1>
+<h4> SuperHot | Takeaway</h4>
+
+{{#if message}}
+    <p class="animated shake userMessages">{{message}}</p>
+{{/if}}
+
+    <div class="main-div">
+
+        <div class="heading-tabs">
+            <div id="signup-tab">Signup</div>
+            <div id="login-tab">Login</div>
+        </div>
+
+        <div class="login-input-section">
+            <button type="button" name="fbBtn" id="fb-login"> Login With Facebook</button>
+            <button type="button" name="gooBtn" id="google-login">Login With Google</button>
+            <p>-- OR Login With Email --</p>
+            <form class="login-form" action="/login" method="POST">
+                <input type="email" name="email" placeholder="Email" required autofocus>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" name="loginBtn">Login</button>
+            </form>
+        </div>
+
+        <div class="signup-input-section">
+            <form class="signup-form" action="/signup" method="POST">
+              <input type="text" name="username" placeholder="Username" required autofocus>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" name="signupBtn">Signup</button>
+            </form>
+        </div>
+
+    </div>
+
+
+
+<script type="text/javascript" src="/js/main.js"></script>
+</body>
+
+</html>
