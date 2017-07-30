@@ -159,8 +159,10 @@ passport.use("facebook", new FacebookStrategy({
 // ###################  GOOGLE STRATEGY  ####################
 
 passport.use("google", new GoogleStrategy({
-    clientID: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    // clientID: process.env.GOOGLE_CLIENT_ID,
+    // clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    clientID: "dfdgasg",
+    clientSecret: "srfas",
     callbackURL: "http://localhost:3000/auth/google/callback"
 }, (accessToken, refreshToken, profile, done) => {
     // use the profile id coming back from google to check db
