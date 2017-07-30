@@ -1,7 +1,6 @@
-require("dotenv").config({
-    path: __dirname + "/../../myvariables"
-});
-
+require("dotenv").config();
+// path: __dirname + "/../../myvariables"
+// path: "myvariables.env"
 const session = require("express-session");
 const passport = require("passport");
 const bcrypt = require("bcryptjs");
