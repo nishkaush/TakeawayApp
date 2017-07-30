@@ -120,8 +120,10 @@ passport.use("local-login", new LocalStrategy({
 // ###################  FACEBOOK STRATEGY  ####################
 
 passport.use("facebook", new FacebookStrategy({
-    clientID: process.env.FACEBOOK_APP_ID,
-    clientSecret: process.env.FACEBOOK_APP_SECRET,
+    // clientID: process.env.FACEBOOK_APP_ID,
+    // clientSecret: process.env.FACEBOOK_APP_SECRET,
+    clientID: "jhbhbkjbk",
+    clientSecret: "hbkjbk",
     callbackURL: `http://localhost:3000/auth/facebook/callback`,
     profileFields: ["id", "email", "displayName"]
 }, (accessToken, refreshToken, profile, done) => {
