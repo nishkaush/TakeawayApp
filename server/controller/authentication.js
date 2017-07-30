@@ -1,5 +1,5 @@
 require("dotenv").config({
-    path: "myvariables.env"
+    path: "./../myvariables.env"
 });
 
 const session = require("express-session");
