@@ -1,3 +1,7 @@
+require("dotenv").config({
+    path: "myvariables.env"
+});
+
 const express = require("express");
 const hbs = require("hbs");
 const fs = require("fs");
@@ -12,9 +16,7 @@ const LocalStrategy = require("passport-local").Strategy;
 const FacebookStrategy = require("passport-facebook").Strategy;
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const authentication = require("./controller/authentication");
-require("dotenv").config({
-    path: "myvariables.env"
-});
+
 var mongoose = require("./models/users").mongoose;
 var Users = require("./models/users").Users;
 var Products = require("./models/products").Products;
