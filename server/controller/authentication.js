@@ -121,9 +121,8 @@ passport.use("local-login", new LocalStrategy({
 passport.use("facebook", new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    // clientID: "jhbhbkjbk",
-    // clientSecret: "hbkjbk",
-    callbackURL: `http://localhost:3000/auth/facebook/callback`,
+    // callbackURL: `http://localhost:3000/auth/facebook/callback`,
+    callbackURL: "https://mighty-fortress-80688.herokuapp.com/auth/facebook/callback",
     profileFields: ["id", "email", "displayName"]
 }, (accessToken, refreshToken, profile, done) => {
     Users.findOne({
@@ -160,9 +159,8 @@ passport.use("facebook", new FacebookStrategy({
 passport.use("google", new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    // clientID: "dfdgasg",
-    // clientSecret: "srfas",
-    callbackURL: "http://localhost:3000/auth/google/callback"
+    // callbackURL: "http://localhost:3000/auth/google/callback"
+    callbackURL: "https://mighty-fortress-80688.herokuapp.com/auth/google/callback"
 }, (accessToken, refreshToken, profile, done) => {
     // use the profile id coming back from google to check db
     Users.findOne({
