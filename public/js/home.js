@@ -11,8 +11,7 @@ const sortingArr = [].slice.call(document.querySelectorAll(".sorting"));
 const logoutBtn = document.getElementById("logoutBtn");
 const viewCartBtn = document.querySelector('button[name="view-cart-btn"]');
 const all = document.querySelector(".all");
-
-
+const logo = document.querySelector(".logo");
 
 
 if (location.pathname === "/home/mains") {
@@ -198,3 +197,9 @@ likeIcon.forEach(function(e) {
     });
 
 });;
+
+
+
+logo.addEventListener("click", function() {
+    window.location = "/home";
+});
