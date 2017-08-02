@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Payment</title>
+    <link rel="stylesheet" href="/css/payment.css">
+</head>
+
+<body>
+
+  <button type="button" name="back-to-home">Back To Home</button>
+  <button type="button" name="view-cart-btn">View Cart ({{numberOfItems}})</button>
+    <button type="button" name="logout-btn" id="logoutBtn">Logout</button>
+
+
+
+    <div class="main-div">
+
+      <form id="checkoutForm" action="/payment" method="POST">
+        <h1>CHECKOUT</h1>
+        <h3>Amount Due : $ {{total}}</h3>
+
+        <input type="text" name="cardholderName" placeholder="Name on the Card" id="cardholderName" required>
+        <div id="ccNumber"></div>
+        <input type="submit" name="submit" id="buyNowBtn" value="Buy Now" required>
+      </form>
+
+    </div>
+
+
+<script type="text/javascript" src="/js/axios.min.js"></script>
+<script type="text/javascript" src="/js/home.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script type="text/javascript" src="/js/payment.js"></script>
+
+</body>
+
+</html>

@@ -39,7 +39,7 @@ button[name="back-to-home"] {
     color: white;
 }
 
-button[name="logout-btn"]:hover {
+button[name="back-to-home"]:hover {
     background: #cc2b5e;
 }
 
@@ -95,4 +95,17 @@ span {
 svg {
     margin-right: 2%;
     cursor: pointer;
+}
+
+button[name="pay-btn"] {
+    width: 200px;
+    height: 50px;
+    margin-top: 2%;
+    cursor: pointer;
+    font-size: 1.2em;
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    font-family: avenir;
+    border: 1px solid #cc2b5e;
+    box-shadow: 1px 2px 1px 1px #cc2b5e;
+    color: white;
 }

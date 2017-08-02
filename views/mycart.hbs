@@ -46,20 +46,29 @@
         <span>$ {{finalPayment myproducts}}</span>
       </div>
 
+      <button type="button" name="pay-btn" data-total="{{finalPayment myproducts}}">Pay Now</button>
     </div>
 
 
 <script type="text/javascript" src="/js/axios.min.js"></script>
-
 <script type="text/javascript" src="/js/home.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
 
 <script type="text/javascript">
-const backToHomeBtn = document.querySelector('button[name="back-to-home"]');
 
-backToHomeBtn.addEventListener("click",function(){
-  window.location="/home";
-});
+    const backToHomeBtn = document.querySelector('button[name="back-to-home"]');
+    const payBtn = document.querySelector('button[name="pay-btn"]');
+
+    backToHomeBtn.addEventListener("click",function(){
+      window.location="/home";
+    });
+
+    payBtn.addEventListener("click",function(){
+    window.location=`/payment?total=${this.dataset.total}`;
+    });
+
 </script>
+
 </body>
 
 </html>

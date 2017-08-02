@@ -352,6 +352,23 @@ app.post("/mycart", (req, res) => {
 
 
 
+app.get("/payment", (req, res) => {
+    if (req.isAuthenticated()) {
+        let numberOfItems = cartItems.reduce((sum, e) => {
+            return sum + parseInt(e.qty);
+        }, 0);
+
+        return res.render("payment", {
+            total: parseInt(req.query.total),
+            numberOfItems: numberOfItems
+        });
+    } else {
+        res.redirect("/");
+    }
+});
+
+
+
 
 app.get("/logout", (req, res) => {
     if (req.isAuthenticated()) { //this is given by passport too
